@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <declare-styleable name="PasswordEditText">
+       <attr name="useStrike" format="boolean"/>
+       <attr name="useValidate" format="boolean"/>
+   </declare-styleable>
+</resources>

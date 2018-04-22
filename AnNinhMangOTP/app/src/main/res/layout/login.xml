@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:heart="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="An ninh mạng"
+        android:textSize="30dp"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:textColor="#D50000"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/layout_back"
+        android:layout_marginTop="10dp"
+        >
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:background="@android:color/transparent"
+            android:id="@+id/edt_email_login"
+            android:drawableLeft="@drawable/ic_action_person"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/layout_back">
+        <com.mteam.android_professional.anninhmangotp.PasswordEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="password"
+            android:id="@+id/edt_pass_login"
+            heart:useStrike="true"
+            heart:useValidate="true"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_action_exit"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+
+    <android.support.v7.widget.AppCompatButton
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:padding="10dp"
+        android:layout_margin="20dp"
+        android:id="@+id/btnLogin"
+        android:textColor="#FFFF"
+        android:background="@drawable/drawable_shape"/>
+
+    <android.support.v7.widget.AppCompatButton
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:padding="10dp"
+        android:layout_margin="20dp"
+        android:id="@+id/btnRegister"
+        android:textColor="#FFFF"
+        android:background="@drawable/drawable_shape"/>
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[User] (
+    [idUser]   INT           IDENTITY (1, 1) NOT NULL,
+    [email]    NVARCHAR (50) NULL,
+    [password] NVARCHAR (50) NULL,
+    [phone]    NVARCHAR (11) NULL,
+    CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED ([idUser] ASC)
