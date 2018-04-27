@@ -86,7 +86,9 @@ namespace OTP
 		
 		private string _password;
 		
-		private string _phone;
+		private System.Nullable<int> _phone;
+		
+		private string _TokenUser;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -98,8 +100,10 @@ namespace OTP
     partial void OnemailChanged();
     partial void OnpasswordChanging(string value);
     partial void OnpasswordChanged();
-    partial void OnphoneChanging(string value);
+    partial void OnphoneChanging(System.Nullable<int> value);
     partial void OnphoneChanged();
+    partial void OnTokenUserChanging(string value);
+    partial void OnTokenUserChanged();
     #endregion
 		
 		public User()
@@ -147,7 +151,7 @@ namespace OTP
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_password", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_password", DbType="NVarChar(MAX)")]
 		public string password
 		{
 			get
@@ -167,8 +171,8 @@ namespace OTP
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phone", DbType="NVarChar(11)")]
-		public string phone
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phone", DbType="Int")]
+		public System.Nullable<int> phone
 		{
 			get
 			{
@@ -183,6 +187,26 @@ namespace OTP
 					this._phone = value;
 					this.SendPropertyChanged("phone");
 					this.OnphoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TokenUser", DbType="NVarChar(MAX)")]
+		public string TokenUser
+		{
+			get
+			{
+				return this._TokenUser;
+			}
+			set
+			{
+				if ((this._TokenUser != value))
+				{
+					this.OnTokenUserChanging(value);
+					this.SendPropertyChanging();
+					this._TokenUser = value;
+					this.SendPropertyChanged("TokenUser");
+					this.OnTokenUserChanged();
 				}
 			}
 		}
