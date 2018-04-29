@@ -1,4 +1,6 @@
-﻿CREATE TABLE [dbo].[User] (
+﻿Tạo cơ sở dữ liệu SQL-Server connect to project OTP by LINQ
+
+CREATE TABLE [dbo].[User] (
     [idUser]    INT            IDENTITY (1, 1) NOT NULL,
     [email]     NVARCHAR (50)  NULL,
     [password]  NVARCHAR (MAX) NULL,
